@@ -22,7 +22,7 @@
   "author": "Nathan Rajlich <nathan@tootallnate.net> (http://tootallnate.net)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/craigcomstocks/ref.git"
+    "url": "git://github.com/sencha/ref.git"
   },
   "main": "./lib/ref.js",
   "scripts": {
@@ -33,7 +33,7 @@
     "build": "node-gyp rebuild"
   },
   "dependencies": {
-    "bindings": "craigcomstocks/node-bindings#find-by-abi",
+    "bindings": "sencha/node-bindings#find-by-abi",
     "debug": "2",
     "nan": "2"
   },
@@ -43,6 +43,6 @@
     "jade": "^0.35.0",
     "marked": "^0.3.2",
     "mocha": "*",
-    "weak": "craigcomstocks/node-weak#find-by-abi"
+    "weak": "sencha/node-weak#find-by-abi"
   }
 }
