@@ -17,7 +17,7 @@
     "byte",
     "64"
   ],
-  "version": "1.3.3",
+  "version": "1.3.4",
   "license": "MIT",
   "author": "Nathan Rajlich <nathan@tootallnate.net> (http://tootallnate.net)",
   "repository": {
@@ -27,7 +27,7 @@
   "main": "./lib/ref.js",
   "scripts": {
     "docs": "node docs/compile",
-    "test": "mocha -gc --reporter spec",
+    "test": "mocha -gc --reporter spec --use_strict"
     "electron": "node-gyp rebuild --runtime=electron --target=1.4.4 --disturl=https://atom.io/download/atom-shell --build-from-source",
     "install": "echo",
     "build": "node-gyp rebuild"
