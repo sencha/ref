@@ -20,7 +20,7 @@ describe('pointer', function () {
     assert.strictEqual(ref.address(out), ref.address(test))
   })
 
-  it('should retain references to a written pointer in a Buffer', function (done) {
+  it('should retain references to a written pointer in a Buffer', function () {
     var child_gc = false
     var parent_gc = false
     var child = new Buffer('a pointer holding some data...')
@@ -40,12 +40,9 @@ describe('pointer', function () {
 
     // now GC `parent`
     parent = null
-    setImmediate(function () {
-      gc()
-      assert(parent_gc, '"parent" has not been garbage collected')
-      assert(child_gc, '"child" has not been garbage collected')
-      done()
-    });
+    gc()
+    assert(parent_gc, '"parent" has not been garbage collected')
+    assert(child_gc, '"child" has not been garbage collected')
   })
 
   it('should throw an Error when reading from the NULL pointer', function () {

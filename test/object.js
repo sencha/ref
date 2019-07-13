@@ -21,7 +21,7 @@ describe('Object', function () {
     assert.deepEqual(obj, out)
   })
 
-  it('should retain references to written Objects', function (done) {
+  it('should retain references to written Objects', function () {
     var o_gc = false
     var buf_gc = false
     var o = { foo: 'bar' }
@@ -41,12 +41,9 @@ describe('Object', function () {
 
     // now GC `buf`
     buf = null
-    setImmediate(function () {
-      gc()
-      assert(buf_gc, '"buf" has not been garbage collected')
-      assert(o_gc, '"o" has not been garbage collected')
-      done()
-    });
+    gc()
+    assert(buf_gc, '"buf" has not been garbage collected')
+    assert(o_gc, '"o" has not been garbage collected')
   })
 
   it('should throw an Error when reading an Object from the NULL pointer', function () {
