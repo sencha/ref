@@ -604,7 +604,6 @@ NAN_MODULE_INIT(init) {
   SET_SIZEOF(ulonglong, unsigned long long);
   SET_SIZEOF(pointer, char *);
   SET_SIZEOF(size_t, size_t);
-  SET_SIZEOF(wchar_t, wchar_t);
   // size of a Persistent handle to a JS object
   SET_SIZEOF(Object, Nan::Persistent<Object>);
 
@@ -636,7 +635,6 @@ NAN_MODULE_INIT(init) {
   SET_ALIGNOF(ulonglong, unsigned long long);
   SET_ALIGNOF(pointer, char *);
   SET_ALIGNOF(size_t, size_t);
-  SET_ALIGNOF(wchar_t, wchar_t);
   SET_ALIGNOF(Object, Nan::Persistent<Object>);
 
   // exports
